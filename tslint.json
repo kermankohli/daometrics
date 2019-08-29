@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "tslint-config-airbnb",
+    "tslint-react",
+    "tslint-config-prettier",
+    "tslint-no-focused-test"
+
+  ],
+  "defaultSeverity": "warning",
+  "rules": {
+    "import-name": false,
+    "variable-name": [
+      true,
+      "allow-pascal-case",
+      "ban-keywords"
+    ],
+    "no-focused-test": true,
+    "jsx-no-multiline-js": false
+  },
+  "indent": [true, "tabs", 2]
+}

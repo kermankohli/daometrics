@@ -1,0 +1,50 @@
+{
+  "name": "helis-lending",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "set HOST=0.0.0.0 && react-scripts-ts start",
+    "build": "yarn lint && react-scripts-ts build",
+    "test": "react-scripts-ts test",
+    "eject": "react-scripts-ts eject",
+    "lint": "tslint --project . -t verbose 'src/**/*.{tsx,ts}'"
+  },
+  "dependencies": {
+    "@helisnetwork/tailwind-config": "^1.7.0",
+    "@types/styled-components": "^4.0.0",
+    "concurrently": "^4.1.1",
+    "npm": "^6.10.3",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.9.0",
+    "react-anime": "^2.2.0",
+    "react-dom": "^16.9.0",
+    "react-number-format": "^4.2.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-router-scroll-top": "^0.2.1",
+    "react-scripts-ts": "^3.1.0",
+    "react-toastify": "^5.3.2",
+    "styled-components": "^4.0.0",
+    "tailwindcss": "^1.1.1",
+    "tailwindcss-plugins": "^0.3.0",
+    "tslint-no-focused-test": "^0.5.0",
+    "typescript": "3.5.3",
+    "yarn": "^1.17.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "@types/react-helmet": "^5.0.8",
+    "@types/react-router": "^5.0.1",
+    "@types/react-router-dom": "^4.3.3",
+    "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.18.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.0.0"
+  }
+}
