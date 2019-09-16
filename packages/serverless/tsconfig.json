@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": "./src",
+    "module": "commonjs",
+    "lib": ["es2015", "es2016", "es2017", "dom"],
+    "strict": false,
+    "sourceMap": true,
+    "noUnusedLocals": false,
+    "declaration": true,
+    "outDir": "dist",
+    "preserveSymlinks": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "types/generated"
+    ],
+    "types": ["node", "jest"]
+  },
+  "include": [
+    "src",
+    "types",
+    "utils"
+  ],
+  "compileOnSave": true
+}
