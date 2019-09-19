@@ -5,11 +5,8 @@ import { BigNumber } from 'ethers/utils';
 import { asyncForEach } from '../utils/array';
 
 import { erc20 } from '../abis/ts/erc20'
-import Nomics from "nomics";
 
-const nomics = new Nomics({
-  apiKey: "37196e095b06bbb04e489939fcc158bd"
-});
+import PriceService from '../services/PriceService';
 
 require('dotenv').config({ path: './.env' });
 
@@ -32,21 +29,12 @@ async function fetch() {
       balances: {}
     };
   });
-
-  const prices = await getPrices();
+  
+  let finalTickers: string[] = Object.keys(tokenAddresses);
+  finalTickers.push('ETH');
+  const prices = await new PriceService().getPrices(finalTickers);
   console.log(prices);
 
-  const contract = new ethers.Contract(daos['moloch'], moloch, provider);
-
-  let members = ethers.utils.id("ProcessProposal(uint256,address,address,uint256,uint256,bool)");
-
-  let membersFilter = {
-      address: daos['moloch'],
-      fromBlock: 0,
-      toBlock: 'latest',
-      topics: [ members ]
-  }
-  
   await ethBalances(prices);
   await tokenBalances(prices);
 
@@ -56,26 +44,8 @@ async function fetch() {
     results[key]['total'] = balances.reduce((previous: string, current: string) => parseFloat(previous) + parseFloat(current));
   });
 
-  // console.log(results);
+  console.log(results);
   
-}
-
-async function getPrices(): Promise<any> {
-  let tokens: string[] = Object.keys(tokenAddresses);
-  tokens.push('ETH');
-  const prices = await nomics.currenciesTicker({
-    interval: ['1d'],
-    ids: tokens,
-    quoteCurrency: "USD", // [DEPRECATED] use "convert" below instead
-    convert: "USD", // defaults to "USD"
-  });
-  
-  let final: {[ticker: string]: number} = {};
-  prices.forEach(item => {
-    console.log(item['price']);
-    final[item['id']] = parseFloat(item['price']);
-  })
-  return final;
 }
 
 async function ethBalances(prices: any) {

@@ -1,8 +1,8 @@
 export const daoAddresses = {
   'aragon': '0xcafe1a77e84698c83ca8931f54a755176ef75f2c',
-  'digix': '0x75ba02c5baf9cc3e9fe01c51df3cb1437e8690d4',
-  'makerdao': '0x8ee7d9235e01e6b42345120b5d270bdb763624c7',
-  'moloch': '0x1fd169A4f5c59ACf79d0Fd5d91D1201EF1Bce9f1'
+  // 'digix': '0x75ba02c5baf9cc3e9fe01c51df3cb1437e8690d4',
+  // 'makerdao': '0x8ee7d9235e01e6b42345120b5d270bdb763624c7',
+  // 'moloch': '0x1fd169A4f5c59ACf79d0Fd5d91D1201EF1Bce9f1'
 };
 
 export const tokenAddresses = {
