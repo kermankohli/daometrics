@@ -46,31 +46,15 @@ async function fetch() {
       toBlock: 'latest',
       topics: [ members ]
   }
+  
+  await ethBalances(prices);
+  await tokenBalances(prices);
 
-  const membersLogs = await provider.getLogs(membersFilter);
-  console.log(membersLogs.length);
-
-  let quits = ethers.utils.id("Ragequit(address,uint256)");
-
-  let quitsFilter = {
-      address: daos['moloch'],
-      fromBlock: 0,
-      toBlock: 'latest',
-      topics: [ quits ]
-  }
-
-  const quitsLogs = await provider.getLogs(quitsFilter);
-  console.log(quitsLogs.length);
-
-
-  // await ethBalances(prices);
-  // await tokenBalances(prices);
-
-  // Object.keys(results).forEach(key => {
-  //   const item = results[key];
-  //   let balances = Object.values(item['balances']);
-  //   results[key]['total'] = balances.reduce((previous: string, current: string) => parseFloat(previous) + parseFloat(current));
-  // });
+  Object.keys(results).forEach(key => {
+    const item = results[key];
+    let balances = Object.values(item['balances']);
+    results[key]['total'] = balances.reduce((previous: string, current: string) => parseFloat(previous) + parseFloat(current));
+  });
 
   // console.log(results);
   
