@@ -1,8 +1,32 @@
-export const daos: {[name: string]: string} = {
-  aragon: '0xcafe1a77e84698c83ca8931f54a755176ef75f2c',
-  // 'digix': '0x75ba02c5baf9cc3e9fe01c51df3cb1437e8690d4',
-  // 'makerdao': '0x8ee7d9235e01e6b42345120b5d270bdb763624c7',
-  // 'moloch': '0x1fd169A4f5c59ACf79d0Fd5d91D1201EF1Bce9f1'
+export enum Structure {
+  Democracy = 'democracy',
+  Plutocracy = 'plutocracy',
+  Dictatorship = 'dictatorship',
+  TBD = 'tbd'
+}
+
+export type DAOInformation = {
+  address: string, 
+  structure: Structure;
+}
+
+export const daos: {[name: string]: DAOInformation} = {
+  aragon: {
+    address: '0xcafe1a77e84698c83ca8931f54a755176ef75f2c',
+    structure: Structure.TBD
+  },
+  digix: {
+    address: '0x75ba02c5baf9cc3e9fe01c51df3cb1437e8690d4',
+    structure: Structure.TBD
+  },
+  makerdao: {
+    address: '0x8ee7d9235e01e6b42345120b5d270bdb763624c7',
+    structure: Structure.TBD
+  },
+  moloch: {
+    address: '0x1fd169A4f5c59ACf79d0Fd5d91D1201EF1Bce9f1',
+    structure: Structure.TBD
+  }
 };
 
 export const tokens: {[ticker: string]: string} = {
@@ -13,16 +37,3 @@ export const tokens: {[ticker: string]: string} = {
   WETH: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
   ANT: '0x960b236A07cf122663c4303350609A66A7B288C0',
 }
-
-// interface DAO {
-//   name: string;
-//   address: string
-//   tokens: string[];
-// };
-
-// export const daos: DAO[] = [
-//   {
-//     name: 'aragon',
-//     address: '0xcafe1a77e84698c83ca8931f54a755176ef75f2c',
-//   }
-// ]

@@ -8,6 +8,8 @@ type Prices = {[ticker: string]: number};
 
 class PriceService {
 
+  prices: Prices = {};
+
   async getPrices(tickers: string[]): Promise<Prices> {
     const prices = await nomics.currenciesTicker({
       interval: ['1d'],
@@ -15,14 +17,35 @@ class PriceService {
       quoteCurrency: "USD", // [DEPRECATED] use "convert" below instead
       convert: "USD", // defaults to "USD"
     });
+
+    this.prices = {};
     
-    let final: Prices = {};
     prices.forEach(item => {
-      console.log(item['price']);
-      final[item['id']] = parseFloat(item['price']);
+      this.prices[item['id']] = parseFloat(item['price']);
     })
-    return final;
+
+    return this.prices;
   }
+
+  async getUSDValues(prices: Prices): Promise<Prices> {
+    const tickerMapping = {
+      'WETH': 'ETH',
+      'CDAI': 'DAI'
+    };
+
+    let usdPrices: Prices = {};
+
+    Object.keys(prices).forEach(ticker => {
+      let priceTicker = ticker;
+      if (tickerMapping[ticker]) {
+        priceTicker = tickerMapping[ticker];
+      }
+      usdPrices[ticker] = prices[ticker] * this.prices[priceTicker];
+    });
+
+    return usdPrices;
+
+  };
 
 };
 
