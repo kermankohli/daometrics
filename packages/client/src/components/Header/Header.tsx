@@ -6,10 +6,10 @@ interface IProps {
 }
 
 const Header: React.FunctionComponent<IProps> = (props) => (
-  <div>
+  <div style={{display: 'flex', justifyContent: 'space-between'}}>
     <div>
       {/* <img className="h-6 mr-md" src={} /> */}
-      <p>HELIS</p>
+      <p>DAOMetrics</p>
     </div>
     <div>
       <a href="https://about.helis.network">

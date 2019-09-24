@@ -19,28 +19,79 @@ const OuterDiv = styled.div`
 `;
 
 const InnerDiv = styled.div`
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
 `;
 
 const StatsBox = styled.div`
-  padding: 2rem;
-  margin: 0 2rem;
+  padding: 1.5rem 1rem;
   flex: 1;
+  text-align: center;
 `;
 
 const StatsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+  @media (max-width: 440px) {
+    flex-direction: column;
+  }
+`;
+
+const Table = styled.table`
+  overflow: auto;
+  display: grid;
+  border-collapse: collapse;
+  min-width: 100%;
+  row-gap: 0.5em;
+  grid-template-columns: 
+    minmax(50px, 1fr)
+    minmax(125px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(100px, 1.67fr);
+`;
+
+const TD = styled.td`
+  padding: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #808080;
+  background-color: #323447;
+`;
+
+const TH = styled.th`
+  padding: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  text-align: left;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: white;
+`;
+
+const TR = styled.tr`
+  margin: 1em;
+  display: contents;
 `;
 
 const Row = (rank: string = 'Rank', name: string = 'Name', structure: string = 'Structure', members: string = 'Members', locked: string = 'Locked') => {
   return(
-    <div style={{display: 'flex', flexDirection: 'row', marginBottom: '1em'}}>
-      <p style={{width: '10em'}}>{rank}</p>
-      <p style={{width: '10em'}}>{name}</p>
-      <p style={{width: '10em'}}>{structure}</p>
-      <p style={{width: '10em'}}>{members}</p>
-      <p style={{width: '10em'}}>{locked}</p>
+    <div style={{display: 'flex', margin: '2em'}}>
+      <p style={{marginRight: '2em'}}>{name}</p>
+      <p style={{marginRight: '2em'}}>{structure}</p>
+      <p style={{marginRight: '2em'}}>{members}</p>
+      <p style={{marginRight: '2em'}}>{rank}</p>
+      <p style={{marginRight: 'em'}}>{locked}</p>
     </div>
   )
 }
@@ -61,7 +112,7 @@ const HomePage: React.FunctionComponent<IProps> = () => {
 
   return (
     <OuterDiv>
-      <h1>Leaderboard</h1>
+      <h1 style={{textAlign: 'center'}}>Leaderboard</h1>
       <InnerDiv>
         <StatsContainer>
           <StatsBox>
@@ -78,12 +129,38 @@ const HomePage: React.FunctionComponent<IProps> = () => {
           </StatsBox>
         </StatsContainer>
       </InnerDiv>
-      <InnerDiv>
-        {Row()}
-        {Row('1', 'MakerDAO', 'Democracy', '1000', '$500m')}
-        {Row('1', 'MakerDAO', 'Democracy', '1000', '$500m')}
-        {Row('1', 'MakerDAO', 'Democracy', '1000', '$500m')}
-      </InnerDiv>
+      {/* <InnerDiv> */}
+        <Table>
+          <thead style={{display: 'contents'}}>
+            <TR>
+              <TH>#</TH>
+              <TH>Name</TH>
+              <TH>Structure</TH>
+              <TH>Locked</TH>
+            </TR>
+          </thead>
+          <tbody style={{display: 'contents'}}>
+            <TR>
+              <TD>1</TD>
+              <TD>MakerDAO</TD>
+              <TD>Democracy</TD>
+              <TD>$300m</TD>
+            </TR>
+            <TR>
+              <TD>1</TD>
+              <TD>MakerDAO</TD>
+              <TD>Democracy</TD>
+              <TD>$300m</TD>
+            </TR>
+          </tbody>
+        </Table>
+        {/* <RowContainer>
+          {Row()}
+          {Row('1', 'MakerDAO', 'Democracy', '1000', '$500m')}
+          {Row('1', 'MakerDAO', 'Democracy', '1000', '$500m')}
+          {Row('1', 'MakerDAO', 'Democracy', '1000', '$500m')}
+        </RowContainer> */}
+      {/* </InnerDiv> */}
     </OuterDiv>
   );
 };
