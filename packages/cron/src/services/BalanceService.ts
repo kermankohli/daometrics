@@ -1,9 +1,9 @@
 import { Provider } from 'ethers/providers';
 import { BigNumber } from 'ethers/utils';
-import { asyncForEach } from '../utils/array';
+import { asyncForEach } from '../../utils/array';
 import { ethers } from 'ethers';
 import { erc20 } from '../abis/ts/erc20'
-import { getKeyByValue } from '../utils/dictionary';
+import { getKeyByValue } from '../../utils/dictionary';
 
 const divider = new BigNumber(10).pow(18);
 

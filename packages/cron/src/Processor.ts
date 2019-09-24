@@ -1,8 +1,8 @@
-import { daos, tokens, DAOInformation } from '../constants/addresses';
+import { daos, tokens, DAOInformation } from './constants/addresses';
 import { ethers } from 'ethers';
 
-import PriceService from '../services/PriceService';
-import BalanceService from '../services/BalanceService';
+import PriceService from './services/PriceService';
+import BalanceService from './services/BalanceService';
 import { asyncForEach } from '../utils/array';
 import { Provider } from 'ethers/providers';
 
