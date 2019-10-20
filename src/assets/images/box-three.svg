@@ -1,0 +1,23 @@
+<svg width="330" height="85" viewBox="0 0 330 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="330" height="85" fill="url(#paint0_linear)"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="330" height="85">
+<rect width="330" height="85" rx="8" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M303.5 1L314 22H293L303.5 1Z" fill="#D8D8D8" fill-opacity="0.25"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M313.5 22L324 43H303L313.5 22Z" fill="#D8D8D8" fill-opacity="0.25"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M292.5 22L303 43H282L292.5 22Z" fill="#D8D8D8" fill-opacity="0.25"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M282.5 43L293 64H272L282.5 43Z" fill="#D8D8D8" fill-opacity="0.25"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M292.5 64L303 85H282L292.5 64Z" fill="#D8D8D8" fill-opacity="0.25"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M271.5 64L282 85H261L271.5 64Z" fill="#D8D8D8" fill-opacity="0.25"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M324.5 43L335 64H314L324.5 43Z" fill="#D8D8D8" fill-opacity="0.25"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M334.5 64L345 85H324L334.5 64Z" fill="#D8D8D8" fill-opacity="0.25"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M313.5 64L324 85H303L313.5 64Z" fill="#D8D8D8" fill-opacity="0.25"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="160.014" y1="124.328" x2="201.083" y2="-32.5265" gradientUnits="userSpaceOnUse">
+<stop stop-color="#343A9F"/>
+<stop offset="1" stop-color="#6D38C1"/>
+</linearGradient>
+</defs>
+</svg>

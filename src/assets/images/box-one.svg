@@ -1,0 +1,25 @@
+<svg width="330" height="85" viewBox="0 0 330 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="330" height="85" fill="url(#paint0_linear)"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="330" height="85">
+<rect width="330" height="85" rx="8" fill="white"/>
+</mask>
+<g mask="url(#mask0)">
+<rect x="249" width="21" height="21" fill="white" fill-opacity="0.268937"/>
+<rect x="270" y="21" width="21" height="21" fill="white" fill-opacity="0.268937"/>
+<rect x="228" y="21" width="21" height="21" fill="white" fill-opacity="0.268937"/>
+<rect x="206" y="43" width="21" height="21" fill="white" fill-opacity="0.268937"/>
+<rect x="228" y="64" width="21" height="21" fill="white" fill-opacity="0.268937"/>
+<rect x="270" y="64" width="21" height="21" fill="white" fill-opacity="0.268937"/>
+<rect x="315" y="64" width="21" height="21" fill="white" fill-opacity="0.268937"/>
+<rect x="185" y="23" width="21" height="21" fill="white" fill-opacity="0.268937"/>
+<rect x="291" width="21" height="21" fill="white" fill-opacity="0.268937"/>
+<rect x="313" y="21" width="21" height="21" fill="white" fill-opacity="0.268937"/>
+<rect x="291" y="43" width="21" height="21" fill="white" fill-opacity="0.268937"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="165.297" y1="-41.8961" x2="124.228" y2="114.958" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF4EA8"/>
+<stop offset="1" stop-color="#FFAE19"/>
+</linearGradient>
+</defs>
+</svg>
