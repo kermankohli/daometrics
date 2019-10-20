@@ -53,10 +53,7 @@ const HomePage: React.FunctionComponent<IProps> = () => {
       } as DAOData;
 
       const tokenBalances = await axios.get(
-        `https://api.bloxy.info/address/balance?address=${dao.address}&chain=eth&key=ACCFF7UlMIQ8X`,
-        {
-          headers: {"Access-Control-Allow-Origin": "*"}
-        })
+        `https://cors-anywhere.herokuapp.com/https://api.bloxy.info/address/balance?address=${dao.address}&chain=eth&key=ACCFF7UlMIQ8X`)
 
       tokenBalances.data.filter((item: any) => {
         return item['sent_txs'] > 0;

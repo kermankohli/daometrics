@@ -1,4 +1,5 @@
 import Nomics from "nomics";
+import axios from 'axios';
 
 const nomics = new Nomics({
   apiKey: "37196e095b06bbb04e489939fcc158bd"
@@ -11,14 +12,12 @@ class PriceService {
   prices: Prices = {};
 
   async getPrices(tickers: string[]): Promise<Prices> {
-    const prices = await nomics.currenciesTicker({
-      interval: ['1d'],
-      ids: tickers,
-      quoteCurrency: "USD", // [DEPRECATED] use "convert" below instead
-      convert: "USD", // defaults to "USD"
-    });
-    
-    prices.forEach(item => {
+    // @ts-ignore
+    const currencies = tickers.join(',');
+    const result = await axios.get(`https://cors-anywhere.herokuapp.com/https://api.nomics.com/v1/currencies/ticker?key=37196e095b06bbb04e489939fcc158bd&ids=${currencies}&interval=1d&convert=USD`);
+    const prices = result.data;
+
+    prices.forEach((item: any) => {
       this.prices[item['id']] = parseFloat(item['price']);
     })
 

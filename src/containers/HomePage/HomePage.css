@@ -85,7 +85,7 @@ tr {
 
 @media (max-width: 480px) {
     table {
-        grid-template-columns: minmax(50px, 0.35fr) minmax(125px, 1.67fr) minmax(100px, 1.67fr);
+        grid-template-columns: minmax(75px, 1fr) minmax(100px, 1.67fr) minmax(100px, 1.67fr);
     }
 
     .leaderboard-container {
