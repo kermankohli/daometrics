@@ -1,13 +1,12 @@
 {
-  "name": "@daometrics/simple-client",
+  "name": "daometrics",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "start": "set HOST=0.0.0.0 && react-scripts-ts start",
     "build": "yarn lint && react-scripts-ts build",
     "test": "react-scripts-ts test",
     "eject": "react-scripts-ts eject",
-    "lint": "tslint --project  -t verbose 'src/**/*.{tsx,ts}'"
+    "lint": "tslint --project . -t verbose 'src/**/*.{tsx,ts}'"
   },
   "dependencies": {
     "axios": "^0.19.0",
