@@ -52,7 +52,11 @@ const HomePage: React.FunctionComponent<IProps> = () => {
         ...dao
       } as DAOData;
 
-      const tokenBalances = await axios.get(`https://api.bloxy.info/address/balance?address=${dao.address}&chain=eth&key=ACCFF7UlMIQ8X`)
+      const tokenBalances = await axios.get(
+        `https://api.bloxy.info/address/balance?address=${dao.address}&chain=eth&key=ACCFF7UlMIQ8X`,
+        {
+          headers: {"Access-Control-Allow-Origin": "*"}
+        })
 
       tokenBalances.data.filter((item: any) => {
         return item['sent_txs'] > 0;
