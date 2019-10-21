@@ -36,11 +36,6 @@ class PriceService {
     let usdPrices: Prices = {};
 
     Object.keys(prices).forEach(ticker => {
-      if (ticker == 'WETH') {
-        console.log(prices);
-        console.log(ticker);
-        console.log(this.prices);
-      }
       let priceTicker = ticker;
       if (tickerMapping[ticker]) {
         priceTicker = tickerMapping[ticker];

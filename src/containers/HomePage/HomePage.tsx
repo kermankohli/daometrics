@@ -85,8 +85,6 @@ const HomePage: React.FunctionComponent<IProps> = () => {
 
     });
 
-    console.log(data);
-
     setDAOData(data);
   }
 
