@@ -29,7 +29,7 @@ export const daos: {[name: string]: DAOInformation} = {
   },
   moloch: {
     name: 'MolochDAO',
-    address: '0x512e07a093aaa20ba288392eadf03838c7a4e522',
+    address: '0x1fd169a4f5c59acf79d0fd5d91d1201ef1bce9f1',
     structure: Structure.TBD
   },
   metacartel: {
