@@ -29,7 +29,27 @@ export const daos: {[name: string]: DAOInformation} = {
   },
   moloch: {
     name: 'MolochDAO',
-    address: '0x1fd169A4f5c59ACf79d0Fd5d91D1201EF1Bce9f1',
+    address: '0x512e07a093aaa20ba288392eadf03838c7a4e522',
+    structure: Structure.TBD
+  },
+  metacartel: {
+    name: 'MetaCartelDAO',
+    address: '0x0372f3696fa7dc99801f435fd6737e57818239f2',
+    structure: Structure.TBD
+  },
+  yang: {
+    name: 'YangDAO',
+    address: '0xb3c02f093e6140ed2ad91be66b302f938cd8434f',
+    structure: Structure.TBD
+  },
+  orochidao: {
+    name: 'OrochiDAO',
+    address: '0x8487dcc6f4b28b911e22a8657ebb16427d4cf5c0',
+    structure: Structure.TBD
+  },
+  daosaka: {
+    name: 'DAOsaka',
+    address: '0x7d1a4fc6df3b16eb894004a4586a29f39ba6d205',
     structure: Structure.TBD
   }
 };
